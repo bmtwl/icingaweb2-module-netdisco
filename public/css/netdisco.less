@@ -1,0 +1,169 @@
+// Netdisco Module - Compact Styling
+
+.netdisco-device-info {
+    margin: 0.3em 0;
+    padding: 0.4em 0.5em;
+    background: @body-bg-color;
+    border: 1px solid @gray-light;
+    border-radius: 2px;
+
+    h3 {
+        margin: 0 0 0.2em 0;
+        font-size: 0.95em;
+        color: @icinga-blue;
+
+        i {
+            margin-right: 0.3em;
+        }
+    }
+
+    .compact-table {
+        width: 100%;
+        font-size: 0.85em;
+        line-height: 1.3;
+
+        td {
+            padding: 0.1em 0.6em 0.1em 0;
+            vertical-align: top;
+
+            &.device-ip {
+                font-family: monospace;
+                color: @text-color-light;
+            }
+
+            &.device-model {
+                font-weight: bold;
+            }
+
+            &.device-location {
+                color: @text-color-light;
+            }
+
+            i {
+                color: @icinga-blue;
+                margin-right: 0.2em;
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    .device-aliases {
+        margin-top: 0.2em;
+        font-size: 0.8em;
+        line-height: 1.2;
+    }
+}
+
+.netdisco-ports-section {
+    h3 {
+        margin: 0 0 0.3em 0;
+        font-size: 1em;
+    }
+
+    .common-table {
+        width: 100%;
+        font-size: 0.85em;
+        line-height: 1.2;
+        border-collapse: collapse;
+
+        th {
+            text-align: left;
+            padding: 0.25em 0.4em;
+            background: @gray-lightest;
+            font-weight: 600;
+            font-size: 0.9em;
+            border-bottom: 2px solid @gray-light;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 0.2em 0.4em;
+            border-bottom: 1px solid @gray-lighter;
+            vertical-align: middle;
+        }
+
+        tr:last-child td {
+            border-bottom: 1px solid @gray-light;
+        }
+    }
+
+    .port-row {
+        &:hover {
+            background-color: @tr-hover-color;
+        }
+
+        .state-ball {
+            display: inline-block;
+            padding: 0.05em 0.3em;
+            border-radius: 2px;
+            font-size: 0.8em;
+            font-weight: bold;
+            white-space: nowrap;
+            line-height: 1.4;
+
+            &.state-up { background: @color-ok; color: #fff; }
+            &.state-down { background: @color-critical; color: #fff; }
+            &.state-warning { background: @color-warning; color: #fff; }
+            &.state-pending { background: @color-pending; color: @text-color; }
+        }
+    }
+
+    .mrtg-header {
+        text-align: center;
+        width: 7em;
+    }
+
+    .mrtg-cell {
+        white-space: nowrap;
+        text-align: center;
+
+        .mrtg-sparkline-wrap {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 0;
+
+            svg {
+                display: block;
+                border-radius: 2px;
+            }
+
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+
+        .mrtg-link {
+            display: inline-block;
+            padding: 0.15em 0.35em;
+            margin-right: 0.15em;
+            background: @icinga-blue;
+            color: #fff;
+            border-radius: 2px;
+            font-size: 0.8em;
+            text-decoration: none;
+            line-height: 1;
+
+            &:hover {
+                background: darken(@icinga-blue, 12%);
+            }
+
+            &.mrtg-errors {
+                background: @color-critical;
+
+                &:hover {
+                    background: darken(@color-critical, 12%);
+                }
+            }
+
+            i {
+                font-style: normal;
+            }
+        }
+    }
+}
+
+.info-box {
+    padding: 1em;
+    text-align: center;
+    color: @text-color-light;
+}
