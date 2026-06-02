@@ -1,0 +1,4 @@
+Name: Netdisco
+Version: 0.1.0
+Depends: icingadb (>=1.0.0)
+Description: Netdisco Device Integration for IcingaDB Web
