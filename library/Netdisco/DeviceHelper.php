@@ -78,6 +78,7 @@ class DeviceHelper
             return 'N/A';
         }
 
+        $uptime = $uptime / 100;
         $days = floor($uptime / 86400);
         $hours = floor(($uptime % 86400) / 3600);
         $mins = floor(($uptime % 3600) / 60);
